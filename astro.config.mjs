@@ -1,26 +1,12 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import starlightThemeBlack from "starlight-theme-black";
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     starlight({
-      plugins: [
-        starlightThemeBlack({
-          navLinks: [
-            {
-              // optional
-              label: "Docs",
-              link: "/getting-started",
-            },
-          ],
-          //optional
-          footerText:
-            "Built & designed by [shadcn](https://twitter.com/shadcn). Ported to Astro Starlight by [Adrián UB](https://github.com/adrian-ub). The source code is available on [GitHub](https://github.com/adrian-ub/starlight-theme-black).",
-        }),
-      ],
       title: "Kasane-Docs",
       social: [
         {
@@ -43,11 +29,16 @@ export default defineConfig({
           autogenerate: { directory: "reference" },
         },
         {
+          label: "API",
+          autogenerate: { directory: "api" },
+        },
+        {
           label: "ライセンス",
           autogenerate: { directory: "license" },
         },
       ],
       customCss: ["./src/css/index.css"],
     }),
+    mdx(),
   ],
 });
