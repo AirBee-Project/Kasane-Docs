@@ -8,6 +8,18 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Kasane-Docs",
+      defaultLocale: "ja",
+      locales: {
+        en: {
+          label: "English",
+        },
+        ja: {
+          label: "日本語",
+        },
+        fr: {
+          label: "Français",
+        },
+      },
       social: [
         {
           icon: "github",
@@ -26,7 +38,7 @@ export default defineConfig({
         },
         {
           label: "ドキュメント",
-          autogenerate: { directory: "reference" },
+          autogenerate: { directory: "docs" },
         },
         {
           label: "API",
