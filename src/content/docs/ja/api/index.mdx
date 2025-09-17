@@ -1,0 +1,40 @@
+---
+title: 目次
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+
+Kasane に対して、下記の API を用いてアクセスすることができる。
+
+## 各環境の概要
+
+### NativeAPI
+
+RestFulAPI を通して、直接動作 URL に Json を Post して動作を行う。http リクエストを送ることができるあらゆる動作環境から Kasane にアクセスすることができる。また、CLI や他の SDK も内部的には Json を Post している。
+
+### CLI
+
+URL を指定して、CLI ベースで命令を与えることができるアプリケーションである。
+
+
+
+### TypeScriptSDK
+
+URL を指定して、TypeScript から Json リクエストを送ることができる SDK である。関数の入力値と出力値が厳密に型付けされているため、TypeSafe な運用が可能である。
+
+<Tabs>
+  <TabItem label="npm" icon='npm'>
+  ```sh
+  npm i kasane
+  ```
+  </TabItem>
+  <TabItem label="pnpm" icon='pnpm'>
+    ```sh
+  pnpm i kasane
+  ```
+  </TabItem>
+</Tabs>
+
+### PythonSDK
+
+URL を指定して、Python から Json リクエストを送ることができる SDK である。

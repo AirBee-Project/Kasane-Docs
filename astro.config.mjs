@@ -34,6 +34,10 @@ export default defineConfig({
           autogenerate: { directory: "concept" },
         },
         {
+          label: "使用方法",
+          autogenerate: { directory: "getting-started" },
+        },
+        {
           label: "時空間ID",
           autogenerate: { directory: "spacetimeid" },
         },
@@ -44,6 +48,7 @@ export default defineConfig({
         {
           label: "API",
           autogenerate: { directory: "api" },
+          collapsed: true,
         },
         {
           label: "ライセンス",
