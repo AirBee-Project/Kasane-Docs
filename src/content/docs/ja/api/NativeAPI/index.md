@@ -1,6 +1,5 @@
 ---
-title: コンセプト
-description: Kasaneのコンセプト
+title: Overview
+sidebar:
+  order: 0
 ---
-
-# API
