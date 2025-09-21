@@ -1,31 +1,49 @@
-# コンセプト
+# Starlight Starter Kit: Basics
 
-Kasane は、ドローンの航路を安全かつ効率的に管理することを目的として開発されました。
+[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-ドローンの航路計画には、以下のような多様かつ時間とともに変化する情報を総合的に解釈・活用する必要があります。
+```
+pnpm create astro@latest -- --template starlight
+```
 
-- 天候
-- 電波状況
-- 人口密度
-- 建物・地形
-- 他の航空機の位置情報
-- 政府・自治体による規制や通達
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-これらの動的な情報を一元的に管理するために、IPA が提唱する[4 次元時空間情報利活用のための空間 ID ガイドライン](https://www.ipa.go.jp/digital/architecture/guidelines/4dspatio-temporal-guideline.html)に基づき、**時空間に関わるデータを多層的に統合・管理**できるデータベースエンジン **「Kasane」** を開発しました。
+## 🚀 Project Structure
 
-# Kasane の特徴
+Inside of your Astro + Starlight project, you'll see the following folders and files:
 
-- **時空間対応**：時間軸を含めた 4 次元のデータ構造に対応。変化し続ける情報の管理・分析が可能。
+```
+.
+├── public/
+├── src/
+│   ├── assets/
+│   ├── content/
+│   │   └── docs/
+│   └── content.config.ts
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
+```
 
-- **情報の重ね合わせ**：異なる種類・次元の情報をレイヤーとして重ね合わせ、条件を満たす時空間を柔軟に抽出できます。
+Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
 
-- **トランザクション機能**：データの整合性と安全性を確保するために、トランザクションによるデータ操作を導入しています。
+Images can be added to `src/assets/` and embedded in Markdown with a relative link.
 
-- **型安全な設計**：データに型情報を持たせることで、入力ミスや整合性の欠如を防ぎ、より確実なデータ管理を実現します。
+Static assets, like favicons, can be placed in the `public/` directory.
 
-- **Wasm 対応**：WebAssembly（Wasm）を用いることで、ブラウザやエッジ環境など多様な実行環境での運用が可能です。
+## 🧞 Commands
 
-# オープンソース
+All commands are run from the root of the project, from a terminal:
 
-Kasane は、ドローン航路管理のみならず、都市計画、災害対策、物流管理など、時空間情報の統合が求められるあらゆる分野での活用を想定しています。
-本ソフトウェアは MTI ライセンスのもとでオープンソースとして公開されており、商用・非商用を問わず、自由にご利用いただけます。
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm build`           | Build your production site to `./dist/`          |
+| `pnpm preview`         | Preview your build locally, before deploying     |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
